@@ -56,20 +56,23 @@ class TreasureHunterAnnotationView: MKAnnotationView {
 
 class ViewController: UIViewController, MKMapViewDelegate {
     
+    class TreasureHunterAnnotation : MKPointAnnotation {}
+    
     //MARK: Constants
     let LOC_COORD_KOBE_CITY_HALL = CLLocationCoordinate2D(latitude: 34.689486, longitude: 135.195739)
     let COORD_SPAN = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
     
     //MARK: Properties
     @IBOutlet weak var mapView: MKMapView!
+    var patorash: TreasureHunterAnnotation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // アノテーションの座標を神戸市役所に設定する
-        let a = MKPointAnnotation()
-        a.coordinate = LOC_COORD_KOBE_CITY_HALL
-        mapView.addAnnotation(a)
+        patorash = TreasureHunterAnnotation()
+        patorash.coordinate = LOC_COORD_KOBE_CITY_HALL
+        mapView.addAnnotation(patorash)
         
         // 神戸市役所を中心に地図を表示する
         mapView.region = MKCoordinateRegion(center: LOC_COORD_KOBE_CITY_HALL, span: COORD_SPAN)
@@ -77,6 +80,25 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     //MARK: MKMapViewDelegate
     
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+//        patorash.coordinate = mapView.centerCoordinate
+//
+        // How to animate an coordinate change of an MKPointAnnotation correctly
+        // https://stackoverflow.com/questions/44819389/how-to-animate-an-coordinate-change-of-an-mkpointannotation-correctly
+        //
+        let destinationLocation = mapView.centerCoordinate
+        UIView.animate(withDuration: 0.2, animations: {
+            self.patorash.coordinate = destinationLocation
+        }, completion: { success in
+            if success {
+                // handle a successfully ended animation
+            } else {
+                // handle a canceled animation, i.e move to destination immediately
+                self.patorash.coordinate = destinationLocation
+            }
+        })
+    }
+
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let reuseId = "Patorash"
         var av = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
