@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 
 class TreasureHunterAnnotationView: MKAnnotationView {
+    var standbyNero = true
     var walker: CALayer!
     
     required init?(coder aDecoder: NSCoder) {
@@ -35,11 +36,16 @@ class TreasureHunterAnnotationView: MKAnnotationView {
         // contentsScale = [UIScreen mainScreen].scale は特に必要ない
         // contentsGravity = kCAGravityResizeなので
         walker.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
-        walker.contents = UIImage(named: "Patorash")?.cgImage
-        walker.contentsRect = CGRect(x: 0, y: 0, width: 0.25, height: 0.25)
+        walker.contents = walkerImage()
+        walker.contentsRect = aroundAnimationRects()[0]
         
         layer.cornerRadius = frame.size.width / 2
         layer.addSublayer(walker)
+    }
+    
+    func walkerImage() -> CGImage? {
+        let name = standbyNero ? "PatorashNero" : "Patorash"
+        return UIImage(named: name)?.cgImage
     }
     
     func startAnimation() {
@@ -54,12 +60,26 @@ class TreasureHunterAnnotationView: MKAnnotationView {
     }
     
     func aroundAnimationRectValues() -> [NSValue] {
+        return aroundAnimationRects().map { NSValue(cgRect: $0) }
+    }
+
+    func aroundAnimationRects() -> [CGRect] {
         let quarter = 0.25
-        return [
-            NSValue(cgRect: CGRect(x: 0, y: 0.00, width: quarter, height: quarter)),
-            NSValue(cgRect: CGRect(x: 0, y: 0.25, width: quarter, height: quarter)),
-            NSValue(cgRect: CGRect(x: 0, y: 0.50, width: quarter, height: quarter)),
-            NSValue(cgRect: CGRect(x: 0, y: 0.75, width: quarter, height: quarter)),
-        ]
+        if standbyNero {
+            return [
+                CGRect(x: 0, y: 0.00, width: 1, height: quarter),
+                CGRect(x: 0, y: 0.25, width: 1, height: quarter),
+                CGRect(x: 0, y: 0.50, width: 1, height: quarter),
+                CGRect(x: 0, y: 0.75, width: 1, height: quarter),
+            ]
+        }
+        else {
+            return [
+                CGRect(x: 0, y: 0.00, width: quarter, height: quarter),
+                CGRect(x: 0, y: 0.25, width: quarter, height: quarter),
+                CGRect(x: 0, y: 0.50, width: quarter, height: quarter),
+                CGRect(x: 0, y: 0.75, width: quarter, height: quarter),
+            ]
+        }
     }
 }
