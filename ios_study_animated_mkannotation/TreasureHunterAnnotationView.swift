@@ -20,18 +20,18 @@ class TreasureHunterAnnotationView: MKAnnotationView {
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         isOpaque = false
-        setFrameSize()
-        setWalker()
+        initFrameSize()
+        initWalker()
         startAnimation()
     }
     
-    func setFrameSize() {
+    func initFrameSize() {
         // フレームサイズを適切な値に設定する
         frame.size.width = 48
         frame.size.height = 48
     }
     
-    func setWalker() {
+    func initWalker() {
         walker = CALayer()
         // contentsScale = [UIScreen mainScreen].scale は特に必要ない
         // contentsGravity = kCAGravityResizeなので
