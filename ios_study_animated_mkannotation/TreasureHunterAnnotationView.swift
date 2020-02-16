@@ -16,7 +16,37 @@ class TreasureHunterAnnotationView: MKAnnotationView {
             startAnimation()
         }
     }
+    var showRadar = false {
+        didSet {
+            if showRadar {
+                if radar?.superlayer != nil {
+                    return
+                }
+                if radar == nil {
+                    radar = CALayer()
+                }
+                radar.frame = self.bounds.insetBy(dx: -20, dy: -20);
+                radar.contents = UIImage(named: "Radar")?.cgImage
+                layer.insertSublayer(radar, below: walker)
+                
+                let radarAnimation = CAKeyframeAnimation(keyPath: "transform")
+                radarAnimation.values = [
+                    NSValue(caTransform3D:CATransform3DIdentity),
+                    NSValue(caTransform3D:CATransform3DMakeRotation(3.14, 0, 0, 1)),
+                    NSValue(caTransform3D:CATransform3DMakeRotation(3.14 * 2, 0, 0, 1)),
+                ]
+                radarAnimation.duration = 3
+                radarAnimation.repeatCount = Float.infinity
+                radarAnimation.isRemovedOnCompletion = false
+                radar.add(radarAnimation, forKey: "radar")
+            }
+            else {
+                radar.removeFromSuperlayer()
+            }
+        }
+    }
     var walker: CALayer!
+    var radar: CALayer!
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -88,4 +118,31 @@ class TreasureHunterAnnotationView: MKAnnotationView {
             ]
         }
     }
+    
+//    func initRadar() {
+////        if (hidden) {
+////            [_searcher removeFromSuperlayer];
+////            return;
+////        }
+//        if radar?.superlayer != nil {
+//            return
+//        }
+//        if radar == nil {
+//            radar = CALayer()
+//        }
+//        radar.frame = self.bounds.insetBy(dx: -20, dy: -20);
+//        radar.contents = UIImage(named: "Radar")?.cgImage
+//        layer.insertSublayer(radar, below: walker)
+//
+//        let radarAnimation = CAKeyframeAnimation(keyPath: "transform")
+//        radarAnimation.values = [
+//            NSValue(caTransform3D:CATransform3DIdentity),
+//            NSValue(caTransform3D:CATransform3DMakeRotation(3.14, 0, 0, 1)),
+//            NSValue(caTransform3D:CATransform3DMakeRotation(3.14 * 2, 0, 0, 1)),
+//        ]
+//        radarAnimation.duration = 3
+//        radarAnimation.repeatCount = Float.infinity
+//        radarAnimation.isRemovedOnCompletion = false
+//        radar.add(radarAnimation, forKey: "radar")
+//    }
 }
