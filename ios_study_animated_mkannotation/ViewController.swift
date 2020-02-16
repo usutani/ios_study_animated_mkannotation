@@ -57,4 +57,17 @@ class ViewController: UIViewController, MKMapViewDelegate {
         }
         return av
     }
+    
+    //MARK: Actions
+    @IBAction func turnOnRadar(_ sender: UIButton) {
+        if let av = mapView.view(for: treasureHunterAnnotation) as? TreasureHunterAnnotationView {
+            av.showRadar = true
+        }
+    }
+    
+    @IBAction func turnOffRadar(_ sender: UIButton) {
+        if let av = mapView.view(for: treasureHunterAnnotation) as? TreasureHunterAnnotationView {
+            av.showRadar = false
+        }
+    }
 }
