@@ -42,8 +42,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         if let av = av as? TreasureHunterAnnotationView {
             av.standbyNero = false
-            av.initWalker()
-            av.startAnimation()
         }
         return av
     }

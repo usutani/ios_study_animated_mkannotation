@@ -10,7 +10,12 @@ import UIKit
 import MapKit
 
 class TreasureHunterAnnotationView: MKAnnotationView {
-    var standbyNero = true
+    var standbyNero = true {
+        didSet {
+            initWalker()
+            startAnimation()
+        }
+    }
     var walker: CALayer!
     
     required init?(coder aDecoder: NSCoder) {
