@@ -35,6 +35,9 @@ class TreasureHunterAnnotationView: MKAnnotationView {
     }
     
     func initWalker() {
+        if walker != nil {
+            walker.removeFromSuperlayer()
+        }
         walker = CALayer()
         // contentsScale = [UIScreen mainScreen].scale は特に必要ない
         // contentsGravity = kCAGravityResizeなので
