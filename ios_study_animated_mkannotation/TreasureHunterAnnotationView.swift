@@ -21,8 +21,6 @@ class TreasureHunterAnnotationView: MKAnnotationView {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         isOpaque = false
         initFrameSize()
-        initWalker()
-        startAnimation()
     }
     
     func initFrameSize() {

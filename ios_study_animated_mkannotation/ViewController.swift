@@ -39,6 +39,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
             av = TreasureHunterAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
         }
         av?.annotation = annotation
+        
+        if let av = av as? TreasureHunterAnnotationView {
+            av.standbyNero = false
+            av.initWalker()
+            av.startAnimation()
+        }
         return av
     }
 }
