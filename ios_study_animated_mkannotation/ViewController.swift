@@ -33,7 +33,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     //MARK: MKMapViewDelegate
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let reuseId = "Patorash"
+        let reuseId = "TreasureHunter"
         var av = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
         if av == nil {
             av = TreasureHunterAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
