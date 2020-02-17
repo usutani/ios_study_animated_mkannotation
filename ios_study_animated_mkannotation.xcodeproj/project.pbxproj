@@ -14,6 +14,7 @@
 		9725571923F4DDD8005B4E63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9725571823F4DDD8005B4E63 /* Assets.xcassets */; };
 		9725571C23F4DDD8005B4E63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9725571A23F4DDD8005B4E63 /* LaunchScreen.storyboard */; };
 		9725572723F4DDD8005B4E63 /* ios_study_animated_mkannotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9725572623F4DDD8005B4E63 /* ios_study_animated_mkannotationTests.swift */; };
+		973BA5A623FA25E100F5A64E /* WalkingTreasureHunterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973BA5A523FA25E100F5A64E /* WalkingTreasureHunterView.swift */; };
 		979A7C6A23F8E206001FDE66 /* TreasureHunterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979A7C6923F8E206001FDE66 /* TreasureHunterAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		9725572223F4DDD8005B4E63 /* ios_study_animated_mkannotationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_study_animated_mkannotationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9725572623F4DDD8005B4E63 /* ios_study_animated_mkannotationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_study_animated_mkannotationTests.swift; sourceTree = "<group>"; };
 		9725572823F4DDD8005B4E63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		973BA5A523FA25E100F5A64E /* WalkingTreasureHunterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingTreasureHunterView.swift; sourceTree = "<group>"; };
 		979A7C6923F8E206001FDE66 /* TreasureHunterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureHunterAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 				9725571123F4DDD6005B4E63 /* SceneDelegate.swift */,
 				9725571323F4DDD6005B4E63 /* ViewController.swift */,
 				979A7C6923F8E206001FDE66 /* TreasureHunterAnnotationView.swift */,
+				973BA5A523FA25E100F5A64E /* WalkingTreasureHunterView.swift */,
 				9725571523F4DDD6005B4E63 /* Main.storyboard */,
 				9725571823F4DDD8005B4E63 /* Assets.xcassets */,
 				9725571A23F4DDD8005B4E63 /* LaunchScreen.storyboard */,
@@ -206,6 +209,7 @@
 				979A7C6A23F8E206001FDE66 /* TreasureHunterAnnotationView.swift in Sources */,
 				9725571423F4DDD6005B4E63 /* ViewController.swift in Sources */,
 				9725571023F4DDD6005B4E63 /* AppDelegate.swift in Sources */,
+				973BA5A623FA25E100F5A64E /* WalkingTreasureHunterView.swift in Sources */,
 				9725571223F4DDD6005B4E63 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
