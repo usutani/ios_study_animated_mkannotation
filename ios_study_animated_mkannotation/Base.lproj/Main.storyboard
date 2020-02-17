@@ -22,8 +22,16 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="JHz-2I-IQ4"/>
                                 </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTa-ht-dJb">
+                                <rect key="frame" x="20" y="44" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Patorash"/>
+                                <connections>
+                                    <action selector="showPatorash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iaW-Q7-xia"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlu-mN-xRP">
-                                <rect key="frame" x="58" y="44" width="99" height="30"/>
+                                <rect key="frame" x="295" y="44" width="99" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Turn On Radar"/>
                                 <connections>
@@ -31,11 +39,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3r-VL-s3x">
-                                <rect key="frame" x="255" y="44" width="101" height="30"/>
+                                <rect key="frame" x="295" y="82" width="101" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Turn Off Radar"/>
                                 <connections>
                                     <action selector="turnOffRadar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rSA-DS-5JY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpN-df-OPX">
+                                <rect key="frame" x="20" y="82" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="PatorashNero"/>
+                                <connections>
+                                    <action selector="showPatorashNero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVs-S5-tPA"/>
                                 </connections>
                             </button>
                         </subviews>

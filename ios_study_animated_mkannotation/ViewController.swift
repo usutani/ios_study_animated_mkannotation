@@ -59,15 +59,26 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
     
     //MARK: Actions
+    
+    @IBAction func showPatorash(_ sender: UIButton) {
+        treasureHunterAnnotationView()?.standbyNero = false
+    }
+    
+    @IBAction func showPatorashNero(_ sender: UIButton) {
+        treasureHunterAnnotationView()?.standbyNero = true
+    }
+    
     @IBAction func turnOnRadar(_ sender: UIButton) {
-        if let av = mapView.view(for: treasureHunterAnnotation) as? TreasureHunterAnnotationView {
-            av.showRadar = true
-        }
+        treasureHunterAnnotationView()?.showRadar = true
     }
     
     @IBAction func turnOffRadar(_ sender: UIButton) {
-        if let av = mapView.view(for: treasureHunterAnnotation) as? TreasureHunterAnnotationView {
-            av.showRadar = false
-        }
+        treasureHunterAnnotationView()?.showRadar = false
+    }
+    
+    //MARK: Private methods
+    
+    private func treasureHunterAnnotationView() -> TreasureHunterAnnotationView? {
+        return mapView.view(for: treasureHunterAnnotation) as? TreasureHunterAnnotationView
     }
 }
