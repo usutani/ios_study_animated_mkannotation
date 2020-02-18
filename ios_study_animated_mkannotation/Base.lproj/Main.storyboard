@@ -22,38 +22,44 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="JHz-2I-IQ4"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTa-ht-dJb">
-                                <rect key="frame" x="20" y="44" width="61" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Patorash"/>
-                                <connections>
-                                    <action selector="showPatorash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iaW-Q7-xia"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpN-df-OPX">
-                                <rect key="frame" x="20" y="82" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="PatorashNero"/>
-                                <connections>
-                                    <action selector="showPatorashNero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVs-S5-tPA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlu-mN-xRP">
-                                <rect key="frame" x="295" y="44" width="99" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Turn On Radar"/>
-                                <connections>
-                                    <action selector="turnOnRadar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Sy-L5-l1V"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3r-VL-s3x">
-                                <rect key="frame" x="295" y="82" width="101" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Turn Off Radar"/>
-                                <connections>
-                                    <action selector="turnOffRadar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rSA-DS-5JY"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="u7t-r6-2Wm">
+                                <rect key="frame" x="20" y="44" width="94" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTa-ht-dJb">
+                                        <rect key="frame" x="0.0" y="0.0" width="61" height="30"/>
+                                        <state key="normal" title="Patorash"/>
+                                        <connections>
+                                            <action selector="showPatorash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iaW-Q7-xia"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpN-df-OPX">
+                                        <rect key="frame" x="0.0" y="38" width="94" height="30"/>
+                                        <state key="normal" title="PatorashNero"/>
+                                        <connections>
+                                            <action selector="showPatorashNero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVs-S5-tPA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jp2-6a-fTL">
+                                <rect key="frame" x="295" y="44" width="101" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlu-mN-xRP">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
+                                        <state key="normal" title="Turn On Radar"/>
+                                        <connections>
+                                            <action selector="turnOnRadar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Sy-L5-l1V"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3r-VL-s3x">
+                                        <rect key="frame" x="0.0" y="38" width="101" height="30"/>
+                                        <state key="normal" title="Turn Off Radar"/>
+                                        <connections>
+                                            <action selector="turnOffRadar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rSA-DS-5JY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nZT-aE-zJb" customClass="WalkingTreasureHunterView" customModule="ios_study_animated_mkannotation" customModuleProvider="target">
                                 <rect key="frame" x="100" y="700" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -76,6 +82,12 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="u7t-r6-2Wm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3cx-Mc-NOO"/>
+                            <constraint firstItem="jp2-6a-fTL" firstAttribute="top" secondItem="u7t-r6-2Wm" secondAttribute="top" id="gkG-4h-qRx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jp2-6a-fTL" secondAttribute="trailing" constant="18" id="upR-FB-9Tw"/>
+                            <constraint firstItem="u7t-r6-2Wm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zcb-zN-agU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
