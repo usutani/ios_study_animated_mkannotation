@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9720514623FCC56B009F7220 /* PrologueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9720514523FCC56B009F7220 /* PrologueViewController.swift */; };
 		9725571023F4DDD6005B4E63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9725570F23F4DDD6005B4E63 /* AppDelegate.swift */; };
 		9725571223F4DDD6005B4E63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9725571123F4DDD6005B4E63 /* SceneDelegate.swift */; };
 		9725571423F4DDD6005B4E63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9725571323F4DDD6005B4E63 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9720514523FCC56B009F7220 /* PrologueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrologueViewController.swift; sourceTree = "<group>"; };
 		9725570C23F4DDD6005B4E63 /* ios_study_animated_mkannotation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_study_animated_mkannotation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9725570F23F4DDD6005B4E63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9725571123F4DDD6005B4E63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				9725571323F4DDD6005B4E63 /* ViewController.swift */,
 				979A7C6923F8E206001FDE66 /* TreasureHunterAnnotationView.swift */,
 				973BA5A523FA25E100F5A64E /* WalkingTreasureHunterView.swift */,
+				9720514523FCC56B009F7220 /* PrologueViewController.swift */,
 				9725571523F4DDD6005B4E63 /* Main.storyboard */,
 				9725571823F4DDD8005B4E63 /* Assets.xcassets */,
 				9725571A23F4DDD8005B4E63 /* LaunchScreen.storyboard */,
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				979A7C6A23F8E206001FDE66 /* TreasureHunterAnnotationView.swift in Sources */,
+				9720514623FCC56B009F7220 /* PrologueViewController.swift in Sources */,
 				9725571423F4DDD6005B4E63 /* ViewController.swift in Sources */,
 				9725571023F4DDD6005B4E63 /* AppDelegate.swift in Sources */,
 				973BA5A623FA25E100F5A64E /* WalkingTreasureHunterView.swift in Sources */,

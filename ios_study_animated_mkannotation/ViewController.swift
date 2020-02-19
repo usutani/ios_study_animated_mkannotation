@@ -20,6 +20,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     //MARK: Properties
     @IBOutlet weak var mapView: MKMapView!
     var treasureHunterAnnotation: TreasureHunterAnnotation!
+    var prologuePresented = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,23 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         // 神戸市役所を中心に地図を表示する
         mapView.region = MKCoordinateRegion(center: LOC_COORD_KOBE_CITY_HALL, span: COORD_SPAN)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presentPrologueIfNeeded()
+    }
+    
+    private func presentPrologueIfNeeded() {
+        if prologuePresented {
+            return
+        }
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Prologue") {
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: {
+                self.prologuePresented = true
+            })
+        }
     }
     
     //MARK: MKMapViewDelegate

@@ -98,5 +98,162 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
+        <!--Prologue View Controller-->
+        <scene sceneID="IIl-UJ-ptT">
+            <objects>
+                <viewController storyboardIdentifier="Prologue" id="VGH-YF-49A" customClass="PrologueViewController" customModule="ios_study_animated_mkannotation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pf3-O4-adp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNb-pi-7YZ">
+                                <rect key="frame" x="0.0" y="90" width="414" height="772"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqW-cx-zHg">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1700"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLV-JH-HBf">
+                                                <rect key="frame" x="8" y="32" width="398" height="100.5"/>
+                                                <string key="text">　寝露（ネロ）とはぐれた破闘羅主は、京の町をさまよっていた。
+　あのとき、うまく盲導犬のふりさえできていれば…寝露があんなに元気よく周りを見渡していなければ、一匹だけ市バスから放り出される事はなかった。
+　言うまい。</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwB-Y9-fIL">
+                                                <rect key="frame" x="8" y="192" width="398" height="92"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="92" id="Ppy-20-Cnf"/>
+                                                </constraints>
+                                                <string key="text">　今は一刻も早く、はぐれて、ひとり不安になっている寝露を探し出してやらなければならない。
+　京都フリークのご主人様と一緒にまわった名所旧跡が、頭の中でひらめいては泡のように消えていく。</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Help1" translatesAutoresizingMaskIntoConstraints="NO" id="fkI-7h-chq">
+                                                <rect key="frame" x="47" y="343.99999999999994" width="320" height="749.50000000000011"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFt-h1-dcA">
+                                                <rect key="frame" x="8" y="1101.5" width="398" height="234"/>
+                                                <string key="text">　東寺は市でにぎやかだった、清水の舞台はまじ高かった。羅城門跡にはかなり肩すかしをくわされたものだ。
+　何にせよ、思い出の場所のどこかに寝露がいるはず。
+
+　「破闘羅主、なんだかとっても眠いんだ」
+
+　寝るなぁああ、寝露ぉおおお。仁王像をみながら言うセリフじゃあないいいい。
+　今、そっちに行くうう。
+
+　かすかな記憶は地図にきらめきとなって現れる。そこにいけば、別の場所も思い出せるはず。走れ破闘羅主。友のため。
+　って最後メロス。</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Help2" translatesAutoresizingMaskIntoConstraints="NO" id="rIh-b3-UUp">
+                                                <rect key="frame" x="55" y="1343.5" width="304" height="333"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOn-5f-fih" customClass="WalkingTreasureHunterView" customModule="ios_study_animated_mkannotation" customModuleProvider="target">
+                                                <rect key="frame" x="323" y="140" width="44" height="44"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="SCM-2R-kNw"/>
+                                                    <constraint firstAttribute="width" constant="44" id="oOc-0u-rOP"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhC-Wt-m3n" customClass="WalkingTreasureHunterView" customModule="ios_study_animated_mkannotation" customModuleProvider="target">
+                                                <rect key="frame" x="77" y="957.5" width="44" height="44"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="bC2-BD-Arh"/>
+                                                    <constraint firstAttribute="width" constant="44" id="bei-Ac-fZY"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qjz-S7-9OO" customClass="WalkingTreasureHunterView" customModule="ios_study_animated_mkannotation" customModuleProvider="target">
+                                                <rect key="frame" x="55" y="1343.5" width="44" height="44"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="29j-Iu-n3U"/>
+                                                    <constraint firstAttribute="width" constant="44" id="cMK-Q2-bPh"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Hv-ql-ms4" customClass="WalkingTreasureHunterView" customModule="ios_study_animated_mkannotation" customModuleProvider="target">
+                                                <rect key="frame" x="323" y="292" width="44" height="44"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="HaJ-bd-SQy"/>
+                                                    <constraint firstAttribute="width" constant="44" id="ORl-Wf-oqO"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="LLV-JH-HBf" secondAttribute="trailing" constant="8" id="09L-U1-GOL"/>
+                                            <constraint firstItem="WwB-Y9-fIL" firstAttribute="leading" secondItem="LLV-JH-HBf" secondAttribute="leading" id="09g-xp-8eh"/>
+                                            <constraint firstItem="vOn-5f-fih" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yqW-cx-zHg" secondAttribute="leading" constant="323" id="1ue-FB-Fl3"/>
+                                            <constraint firstItem="fkI-7h-chq" firstAttribute="top" secondItem="8Hv-ql-ms4" secondAttribute="bottom" constant="8" id="8Do-R9-vst"/>
+                                            <constraint firstItem="8Hv-ql-ms4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yqW-cx-zHg" secondAttribute="leading" constant="323" id="APL-cL-4ml"/>
+                                            <constraint firstAttribute="height" constant="1700" id="Bxc-S5-2e1"/>
+                                            <constraint firstItem="WwB-Y9-fIL" firstAttribute="trailing" secondItem="vOn-5f-fih" secondAttribute="trailing" constant="39" id="Cp0-ad-vfC"/>
+                                            <constraint firstItem="LLV-JH-HBf" firstAttribute="leading" secondItem="yqW-cx-zHg" secondAttribute="leading" constant="8" id="Iht-dK-gyp"/>
+                                            <constraint firstItem="LLV-JH-HBf" firstAttribute="top" secondItem="yqW-cx-zHg" secondAttribute="top" constant="32" id="L7v-3X-2gB"/>
+                                            <constraint firstAttribute="trailing" secondItem="BFt-h1-dcA" secondAttribute="trailing" constant="8" id="MO6-97-XRF"/>
+                                            <constraint firstItem="BFt-h1-dcA" firstAttribute="top" secondItem="fkI-7h-chq" secondAttribute="bottom" constant="8" id="Oxd-t3-Tbn"/>
+                                            <constraint firstItem="Qjz-S7-9OO" firstAttribute="leading" secondItem="rIh-b3-UUp" secondAttribute="leading" id="RDg-2m-y5b"/>
+                                            <constraint firstItem="rIh-b3-UUp" firstAttribute="top" secondItem="BFt-h1-dcA" secondAttribute="bottom" constant="8" id="WMH-X5-0S8"/>
+                                            <constraint firstItem="dhC-Wt-m3n" firstAttribute="top" secondItem="fkI-7h-chq" secondAttribute="bottom" constant="-136" id="Zzn-ys-AqD"/>
+                                            <constraint firstItem="vOn-5f-fih" firstAttribute="top" secondItem="LLV-JH-HBf" secondAttribute="bottom" constant="7.5" id="bUk-xh-Hea"/>
+                                            <constraint firstItem="WwB-Y9-fIL" firstAttribute="top" secondItem="vOn-5f-fih" secondAttribute="bottom" constant="8" id="cfB-w8-FjF"/>
+                                            <constraint firstItem="fkI-7h-chq" firstAttribute="leading" secondItem="dhC-Wt-m3n" secondAttribute="trailing" constant="-74" id="m2l-1d-aR1"/>
+                                            <constraint firstAttribute="trailing" secondItem="8Hv-ql-ms4" secondAttribute="trailing" constant="47" id="o0Q-2n-8Af"/>
+                                            <constraint firstItem="8Hv-ql-ms4" firstAttribute="top" secondItem="WwB-Y9-fIL" secondAttribute="bottom" constant="8" id="qz6-4w-On7"/>
+                                            <constraint firstItem="BFt-h1-dcA" firstAttribute="leading" secondItem="yqW-cx-zHg" secondAttribute="leading" constant="8" id="sYQ-In-Vti"/>
+                                            <constraint firstAttribute="trailing" secondItem="vOn-5f-fih" secondAttribute="trailing" constant="47" id="vBi-75-tRw"/>
+                                            <constraint firstItem="Qjz-S7-9OO" firstAttribute="top" secondItem="rIh-b3-UUp" secondAttribute="top" id="xMt-zA-6vZ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yqW-cx-zHg" firstAttribute="trailing" secondItem="pvc-wx-DH9" secondAttribute="trailing" id="3IF-Ff-DGP"/>
+                                    <constraint firstItem="rIh-b3-UUp" firstAttribute="centerX" secondItem="pvc-wx-DH9" secondAttribute="centerX" id="5Ux-a2-Tem"/>
+                                    <constraint firstItem="fkI-7h-chq" firstAttribute="centerX" secondItem="pvc-wx-DH9" secondAttribute="centerX" id="AQQ-r0-K5H"/>
+                                    <constraint firstItem="yqW-cx-zHg" firstAttribute="bottom" secondItem="pvc-wx-DH9" secondAttribute="bottom" id="RKc-RN-ob3"/>
+                                    <constraint firstItem="yqW-cx-zHg" firstAttribute="top" secondItem="pvc-wx-DH9" secondAttribute="top" id="SOR-AL-rjW"/>
+                                    <constraint firstItem="yqW-cx-zHg" firstAttribute="leading" secondItem="pvc-wx-DH9" secondAttribute="leading" id="cOC-5Q-hlF"/>
+                                    <constraint firstItem="yqW-cx-zHg" firstAttribute="width" secondItem="We7-pI-gT4" secondAttribute="width" id="mKo-Dx-pjg"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="pvc-wx-DH9"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="We7-pI-gT4"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfP-Nr-soO">
+                                <rect key="frame" x="357" y="52" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="done:" destination="VGH-YF-49A" eventType="touchUpInside" id="UO9-Ka-Rbt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DNb-pi-7YZ" firstAttribute="top" secondItem="OfP-Nr-soO" secondAttribute="bottom" constant="8" id="1GJ-qe-Wa1"/>
+                            <constraint firstItem="xDi-gD-Msd" firstAttribute="trailing" secondItem="OfP-Nr-soO" secondAttribute="trailing" constant="20" id="9JI-Hf-cM0"/>
+                            <constraint firstItem="DNb-pi-7YZ" firstAttribute="trailing" secondItem="xDi-gD-Msd" secondAttribute="trailing" id="Af6-m6-AzN"/>
+                            <constraint firstItem="DNb-pi-7YZ" firstAttribute="bottom" secondItem="xDi-gD-Msd" secondAttribute="bottom" id="C62-vb-LtI"/>
+                            <constraint firstItem="OfP-Nr-soO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pf3-O4-adp" secondAttribute="leading" constant="357" id="HYW-mH-JBp"/>
+                            <constraint firstItem="DNb-pi-7YZ" firstAttribute="leading" secondItem="xDi-gD-Msd" secondAttribute="leading" id="HsM-mp-Vr3"/>
+                            <constraint firstItem="OfP-Nr-soO" firstAttribute="top" secondItem="xDi-gD-Msd" secondAttribute="top" constant="8" id="noX-vA-fjz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xDi-gD-Msd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jh5-5i-wYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902.89855072463774" y="138.61607142857142"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Help1" width="320" height="749.5"/>
+        <image name="Help2" width="304" height="333"/>
+    </resources>
 </document>
