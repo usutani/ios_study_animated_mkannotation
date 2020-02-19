@@ -118,7 +118,7 @@
 　あのとき、うまく盲導犬のふりさえできていれば…寝露があんなに元気よく周りを見渡していなければ、一匹だけ市バスから放り出される事はなかった。
 　言うまい。</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwB-Y9-fIL">
@@ -129,14 +129,14 @@
                                                 <string key="text">　今は一刻も早く、はぐれて、ひとり不安になっている寝露を探し出してやらなければならない。
 　京都フリークのご主人様と一緒にまわった名所旧跡が、頭の中でひらめいては泡のように消えていく。</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Help1" translatesAutoresizingMaskIntoConstraints="NO" id="fkI-7h-chq">
-                                                <rect key="frame" x="47" y="343.99999999999994" width="320" height="749.50000000000011"/>
+                                                <rect key="frame" x="-113" y="344" width="640" height="1499"/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFt-h1-dcA">
-                                                <rect key="frame" x="8" y="1101.5" width="398" height="234"/>
+                                                <rect key="frame" x="8" y="1851" width="398" height="234"/>
                                                 <string key="text">　東寺は市でにぎやかだった、清水の舞台はまじ高かった。羅城門跡にはかなり肩すかしをくわされたものだ。
 　何にせよ、思い出の場所のどこかに寝露がいるはず。
 
@@ -148,11 +148,11 @@
 　かすかな記憶は地図にきらめきとなって現れる。そこにいけば、別の場所も思い出せるはず。走れ破闘羅主。友のため。
 　って最後メロス。</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Help2" translatesAutoresizingMaskIntoConstraints="NO" id="rIh-b3-UUp">
-                                                <rect key="frame" x="55" y="1343.5" width="304" height="333"/>
+                                                <rect key="frame" x="-97" y="2093" width="608" height="666"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOn-5f-fih" customClass="WalkingTreasureHunterView" customModule="ios_study_animated_mkannotation" customModuleProvider="target">
                                                 <rect key="frame" x="323" y="140" width="44" height="44"/>
@@ -163,7 +163,7 @@
                                                 </constraints>
                                             </view>
                                             <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhC-Wt-m3n" customClass="WalkingTreasureHunterView" customModule="ios_study_animated_mkannotation" customModuleProvider="target">
-                                                <rect key="frame" x="77" y="957.5" width="44" height="44"/>
+                                                <rect key="frame" x="-83" y="1707" width="44" height="44"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="bC2-BD-Arh"/>
@@ -171,7 +171,7 @@
                                                 </constraints>
                                             </view>
                                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qjz-S7-9OO" customClass="WalkingTreasureHunterView" customModule="ios_study_animated_mkannotation" customModuleProvider="target">
-                                                <rect key="frame" x="55" y="1343.5" width="44" height="44"/>
+                                                <rect key="frame" x="-97" y="2093" width="44" height="44"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="29j-Iu-n3U"/>
@@ -240,7 +240,7 @@
                             <constraint firstItem="xDi-gD-Msd" firstAttribute="trailing" secondItem="OfP-Nr-soO" secondAttribute="trailing" constant="20" id="9JI-Hf-cM0"/>
                             <constraint firstItem="DNb-pi-7YZ" firstAttribute="trailing" secondItem="xDi-gD-Msd" secondAttribute="trailing" id="Af6-m6-AzN"/>
                             <constraint firstItem="DNb-pi-7YZ" firstAttribute="bottom" secondItem="xDi-gD-Msd" secondAttribute="bottom" id="C62-vb-LtI"/>
-                            <constraint firstItem="OfP-Nr-soO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pf3-O4-adp" secondAttribute="leading" constant="357" id="HYW-mH-JBp"/>
+                            <constraint firstItem="OfP-Nr-soO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pf3-O4-adp" secondAttribute="leading" constant="100" id="HYW-mH-JBp"/>
                             <constraint firstItem="DNb-pi-7YZ" firstAttribute="leading" secondItem="xDi-gD-Msd" secondAttribute="leading" id="HsM-mp-Vr3"/>
                             <constraint firstItem="OfP-Nr-soO" firstAttribute="top" secondItem="xDi-gD-Msd" secondAttribute="top" constant="8" id="noX-vA-fjz"/>
                         </constraints>

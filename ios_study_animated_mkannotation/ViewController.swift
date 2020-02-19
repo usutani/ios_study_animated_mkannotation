@@ -39,18 +39,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
         presentPrologueIfNeeded()
     }
     
-    private func presentPrologueIfNeeded() {
-        if prologuePresented {
-            return
-        }
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "Prologue") {
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true, completion: {
-                self.prologuePresented = true
-            })
-        }
-    }
-    
     //MARK: MKMapViewDelegate
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
@@ -76,6 +64,16 @@ class ViewController: UIViewController, MKMapViewDelegate {
         return av
     }
     
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if view is TreasureHunterAnnotationView {
+            presentPrologue()
+        }
+        // 選択を解除
+        for annotaion in mapView.selectedAnnotations {
+            mapView.deselectAnnotation(annotaion, animated: false)
+        }
+    }
+    
     //MARK: Actions
     
     @IBAction func showPatorash(_ sender: UIButton) {
@@ -98,5 +96,21 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     private func treasureHunterAnnotationView() -> TreasureHunterAnnotationView? {
         return mapView.view(for: treasureHunterAnnotation) as? TreasureHunterAnnotationView
+    }
+    
+    private func presentPrologueIfNeeded() {
+        if prologuePresented {
+            return
+        }
+        presentPrologue()
+    }
+    
+    private func presentPrologue() {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Prologue") {
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: {
+                self.prologuePresented = true
+            })
+        }
     }
 }
