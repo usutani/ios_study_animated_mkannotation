@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, PrologueViewControllerDelegate {
     
     class TreasureHunterAnnotation : MKPointAnnotation {}
     
@@ -20,7 +20,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     //MARK: Properties
     @IBOutlet weak var mapView: MKMapView!
     var treasureHunterAnnotation: TreasureHunterAnnotation!
-    var prologuePresented = false
+    var prologueWasPresented = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +37,31 @@ class ViewController: UIViewController, MKMapViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         presentPrologueIfNeeded()
+    }
+    
+    private func presentPrologueIfNeeded() {
+        if prologueWasPresented {
+            return
+        }
+        presentPrologue()
+    }
+    
+    //MARK: PrologueViewControllerDelegate
+    
+    func prologueViewControllerDone() {
+        zoomInIfPrologue()
+    }
+    
+    private func zoomInIfPrologue() {
+        if prologueWasPresented {
+            return
+        }
+        prologueWasPresented = true
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            let rgn = MKCoordinateRegion(center: self.mapView.centerCoordinate, latitudinalMeters: 200, longitudinalMeters: 200)
+            self.mapView.setRegion(rgn, animated: true)
+        }
     }
     
     //MARK: MKMapViewDelegate
@@ -98,19 +123,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
         return mapView.view(for: treasureHunterAnnotation) as? TreasureHunterAnnotationView
     }
     
-    private func presentPrologueIfNeeded() {
-        if prologuePresented {
-            return
-        }
-        presentPrologue()
-    }
-    
     private func presentPrologue() {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "Prologue") {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Prologue") as? PrologueViewController {
             vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true, completion: {
-                self.prologuePresented = true
-            })
+            vc.delegate = self
+            present(vc, animated: true, completion: nil)
         }
     }
 }

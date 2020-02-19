@@ -8,10 +8,17 @@
 
 import UIKit
 
+protocol PrologueViewControllerDelegate : NSObjectProtocol {
+    func prologueViewControllerDone()
+}
+
 class PrologueViewController: UIViewController {
+    
+    weak var delegate: PrologueViewControllerDelegate?
     
     @IBAction func done(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        delegate?.prologueViewControllerDone()
     }
     
 }
